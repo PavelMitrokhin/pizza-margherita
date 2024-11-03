@@ -16,6 +16,11 @@ public class PizzaMenuPage {
         driver.findElement(By.xpath(PizzaMenuXpath.BUTTON_ADD_TO_CART_PIZZA_MARGARITA_XPATH)).click();
     }
 
+    public PizzaMenuPage confirmAddToCartMargarita() {
+        driver.findElement(By.xpath(PizzaMenuXpath.BUTTON_CONFIRM_ADD_TO_CART_PIZZA_MARGARITA_XPATH)).click();
+        return this;
+    }
+
     public String getOrderPopupMessage() {
         return driver.findElement(By.xpath(PizzaMenuXpath.OUTPUT_ORDER_PIZZA_POPUP_XPATH)).getText();
     }
