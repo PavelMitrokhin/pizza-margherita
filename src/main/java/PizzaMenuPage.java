@@ -8,12 +8,14 @@ public class PizzaMenuPage {
         this.driver = driver;
     }
 
-    public void clickHyperlinkPizzaMenuPage(){
+    public PizzaMenuPage clickHyperlinkPizzaMenuPage() {
         driver.findElement(By.xpath(PizzaMenuXpath.HYPERLINK_PIZZA_MENU_XPATH)).click();
+        return this;
     }
 
-    public void addToCartMargarita() {
+    public PizzaMenuPage addToCartMargarita() {
         driver.findElement(By.xpath(PizzaMenuXpath.BUTTON_ADD_TO_CART_PIZZA_MARGARITA_XPATH)).click();
+        return this;
     }
 
     public PizzaMenuPage confirmAddToCartMargarita() {
@@ -25,16 +27,21 @@ public class PizzaMenuPage {
         return driver.findElement(By.xpath(PizzaMenuXpath.OUTPUT_ORDER_PIZZA_POPUP_XPATH)).getText();
     }
 
-    public String getOrderCounter(){
+    public String getOrderCounter() {
         return driver.findElement(By.xpath(PizzaMenuXpath.OUTPUT_ORDER_COUNTER_XPATH)).getText();
     }
 
-    public PizzaMenuPage clickCart(){
+    public PizzaMenuPage clickCart() {
         driver.findElement(By.xpath(PizzaMenuXpath.HYPERLINK_CART_XPATH)).click();
         return this;
     }
 
-    public String getAddedPizzaName(){
+    public String getAddedPizzaName() {
         return driver.findElement(By.xpath(PizzaMenuXpath.OUTPUT_ADDED_MARGARITA_XPATH)).getText();
+    }
+
+    public PizzaMenuPage addToCartCola() {
+        driver.findElement(By.xpath(PizzaMenuXpath.BUTTON_ADD_TO_CART_COLA_XPATH)).click();
+        return this;
     }
 }
