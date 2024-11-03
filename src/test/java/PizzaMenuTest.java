@@ -11,7 +11,7 @@ public class PizzaMenuTest extends HomeTest {
         pizzaMenuPage.clickHyperlinkPizzaMenuPage();
     }
 
-    @Test
+    @Test(testName = "Заказ пиццы Маргарита")
     public void addMargaritaToCartTest() {
         pizzaMenuPage.addToCartMargarita();
 
@@ -24,5 +24,18 @@ public class PizzaMenuTest extends HomeTest {
         pizzaMenuPage.clickCart();
 
         AssertJUnit.assertEquals(PizzaMenuMessage.ADDED_TO_CART_MARGARITA, pizzaMenuPage.getAddedPizzaName());
+    }
+
+    @Test(testName = "Заказ пиццы Маргарита и колы")
+    public void addMargariteAndColaTest() {
+        pizzaMenuPage
+                .addToCartMargarita()
+                .confirmAddToCartMargarita()
+                .clickHyperlinkDrinksMenuPage()
+                .addToCartCola()
+                .clickCart();
+
+        AssertJUnit.assertEquals(PizzaMenuMessage.ADDED_TO_CART_MARGARITA, pizzaMenuPage.getAddedPizzaName());
+        AssertJUnit.assertEquals(PizzaMenuMessage.ADDED_TO_CART_COLA, pizzaMenuPage.getAddedColaName());
     }
 }
