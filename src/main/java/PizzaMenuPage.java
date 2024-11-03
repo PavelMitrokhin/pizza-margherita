@@ -12,9 +12,8 @@ public class PizzaMenuPage {
         driver.findElement(By.xpath(PizzaMenuXpath.HYPERLINK_PIZZA_MENU_XPATH)).click();
     }
 
-    public PizzaMenuPage addToCartMargarita() {
+    public void addToCartMargarita() {
         driver.findElement(By.xpath(PizzaMenuXpath.BUTTON_ORDER_PIZZA_MARGARITA_XPATH)).click();
-        return this;
     }
 
     public String getOrderPopupMessage() {
