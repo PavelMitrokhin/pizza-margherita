@@ -13,7 +13,7 @@ public class PizzaMenuPage {
     }
 
     public void addToCartMargarita() {
-        driver.findElement(By.xpath(PizzaMenuXpath.BUTTON_ORDER_PIZZA_MARGARITA_XPATH)).click();
+        driver.findElement(By.xpath(PizzaMenuXpath.BUTTON_ADD_TO_CART_PIZZA_MARGARITA_XPATH)).click();
     }
 
     public String getOrderPopupMessage() {
