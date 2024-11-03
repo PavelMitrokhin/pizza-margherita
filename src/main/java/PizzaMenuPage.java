@@ -40,6 +40,10 @@ public class PizzaMenuPage {
         return driver.findElement(By.xpath(PizzaMenuXpath.OUTPUT_ADDED_MARGARITA_XPATH)).getText();
     }
 
+    public String getAddedColaName() {
+        return driver.findElement(By.xpath(PizzaMenuXpath.OUTPUT_ADDED_COLA_XPATH)).getText();
+    }
+
     public PizzaMenuPage addToCartCola() {
         driver.findElement(By.xpath(PizzaMenuXpath.BUTTON_ADD_TO_CART_COLA_XPATH)).click();
         return this;
