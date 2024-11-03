@@ -24,4 +24,17 @@ public class PizzaMenuPage {
     public String getOrderPopupMessage() {
         return driver.findElement(By.xpath(PizzaMenuXpath.OUTPUT_ORDER_PIZZA_POPUP_XPATH)).getText();
     }
+
+    public String getOrderCounter(){
+        return driver.findElement(By.xpath(PizzaMenuXpath.OUTPUT_ORDER_COUNTER_XPATH)).getText();
+    }
+
+    public PizzaMenuPage clickCart(){
+        driver.findElement(By.xpath(PizzaMenuXpath.HYPERLINK_CART_XPATH)).click();
+        return this;
+    }
+
+    public String getAddedPizzaName(){
+        return driver.findElement(By.xpath(PizzaMenuXpath.OUTPUT_ADDED_MARGARITA_XPATH)).getText();
+    }
 }
