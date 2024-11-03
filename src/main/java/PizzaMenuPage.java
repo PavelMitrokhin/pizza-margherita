@@ -44,4 +44,9 @@ public class PizzaMenuPage {
         driver.findElement(By.xpath(PizzaMenuXpath.BUTTON_ADD_TO_CART_COLA_XPATH)).click();
         return this;
     }
+
+    public PizzaMenuPage clickHyperlinkDrinksMenuPage() {
+        driver.findElement(By.xpath(PizzaMenuXpath.HYPERLINK_DRINKS_XPATH)).click();
+        return this;
+    }
 }
